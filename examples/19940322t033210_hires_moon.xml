@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/msn/v1/PDS4_MSN_1B00_1100.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1D00_1730.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1B00_1100.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="../PDS4_CLEMENTINE_1F00_1000.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational
+xmlns="http://pds.nasa.gov/pds4/pds/v1"
+xmlns:msn="http://pds.nasa.gov/pds4/msn/v1"
+xmlns:img="http://pds.nasa.gov/pds4/img/v1"
+xmlns:proc="http://pds.nasa.gov/pds4/proc/v1"
+xmlns:geom="http://pds.nasa.gov/pds4/geom/v1"
+xmlns:clementine="http://pds.nasa.gov/pds4/mission/clementine/v1"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation=
+    "http://pds.nasa.gov/pds4/pds/v1     https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd
+    http://pds.nasa.gov/pds4/msn/v1     https://pds.nasa.gov/pds4/msn/v1/PDS4_MSN_1B00_1100.xsd
+    http://pds.nasa.gov/pds4/img/v1     https://pds.nasa.gov/pds4/img/v1/PDS4_IMG_1D00_1730.xsd
+    http://pds.nasa.gov/pds4/proc/v1     https://pds.nasa.gov/pds4/proc/v1/PDS4_PROC_1B00_1100.xsd
+    http://pds.nasa.gov/pds4/geom/v1   https://pds.nasa.gov/pds4/geom/v1/PDS4_GEOM_1E00_1810.xsd
+    http://pds.nasa.gov/pds4/mission/clementine/v1
+    ../PDS4_CLEMENTINE_1F00_1000.xsd">
+  <Identification_Area>
+    <logical_identifier>urn:nasa:pds:clementine:data:19940322t033210_hires_moon</logical_identifier>
+    <version_id>1.0</version_id>
+    <title>
+      Clementine LIDAR High-Resolution Imager (HIRES) EDR Product 19940322t033210_hires_moon
+    </title>
+    <information_model_version>1.15.0.0</information_model_version>
+    <product_class>Product_Observational</product_class>
+    <Citation_Information>
+      <author_list>TBD</author_list>
+      <editor_list>TBD</editor_list>
+      <publication_year>2021</publication_year>
+      <description>
+        This is a single observation from the Clementine LIDAR High-Resolution
+        Imager (HIRES) with an accompanying image histogram. Most, but not
+        all, of the Clementine observational data were compressed onboard using a
+        proprietary hardware-accelerated JPEG-style discrete cosine transform
+        compression algorithm designed by Matra. For most purposes, including archival,
+        the instrument team retained these data in their native forms, whether compressed or uncompressed
+        (aside from depacketizing them into discrete binary files containing individual
+        observations). For archival, they also attached PDS3 labels, image histograms, and
+        sometimes browse images to each file. To permit use of the EDR products,
+        they included decompression and image-reading software in the archive.
+
+        To increase usability of the archive and meet PDS4 standards,
+        we have detached these images from their metadata and ancillary data,
+        decompressed those that were compressed (reference the
+        clementine:clem_jpeg_version and img:onboard_compression_ratio
+        attributes for details on the prior compression state of this
+        particular image), and converted them to FITS format. Although they are
+        now readable by general-purpose software, often contain visually-recognizable
+        features, and may have been subject to lossy compression, these products remain
+        "raw" in the sense that they have not been "scientifically" processed -- radiometrically
+        calibrated, corrected for instrument signature, or otherwise modified to make them
+        straightforwardly suitable for science purposes.
+      </description>
+    </Citation_Information>
+    <Modification_History>
+      <Modification_Detail>
+        <modification_date>2020-11-30</modification_date>
+        <version_id>1.0</version_id>
+        <description>
+          Initial PDS4 version of this product.
+        </description>
+      </Modification_Detail>
+    </Modification_History>
+  </Identification_Area>
+  <Observation_Area>
+    <Time_Coordinates>
+      <start_date_time>1994-03-22T03:32:10.536Z</start_date_time>
+      <stop_date_time>1994-03-22T03:32:10.536Z</stop_date_time>
+    </Time_Coordinates>
+    <Primary_Result_Summary>
+      <purpose>Science</purpose>
+      <processing_level>Raw</processing_level>
+      <Science_Facets>
+        <wavelength_range>Near Infrared</wavelength_range>
+        <discipline_name>Imaging</discipline_name>
+      </Science_Facets>
+    </Primary_Result_Summary>
+    <Investigation_Area>
+      <name>DEEP SPACE PROGRAM SCIENCE EXPERIMENT</name>
+      <type>Mission</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:investigation:mission.deep_space_program_science_experiment::1.1</lidvid_reference>
+        <reference_type>data_to_investigation</reference_type>
+      </Internal_Reference>
+    </Investigation_Area>
+    <Observing_System>
+      <Observing_System_Component>
+        <name>CLEMENTINE 1</name>
+        <type>Host</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument_host:spacecraft.clem1::1.1</lidvid_reference>
+          <reference_type>is_instrument_host</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+      <Observing_System_Component>
+        <name>LIDAR HIGH-RESOLUTION IMAGER</name>
+        <type>Instrument</type>
+        <Internal_Reference>
+          <lidvid_reference>urn:nasa:pds:context:instrument:hires.clem1::1.0</lidvid_reference>
+          <reference_type>is_instrument</reference_type>
+        </Internal_Reference>
+      </Observing_System_Component>
+    </Observing_System>
+    <Target_Identification>
+      <name>MOON</name>
+      <type>Satellite</type>
+      <Internal_Reference>
+        <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+        <reference_type>data_to_target</reference_type>
+      </Internal_Reference>
+    </Target_Identification>
+    <Mission_Area>
+      <clementine:Clementine_Parameters>
+        <clementine:original_product_id>LHD40648.144</clementine:original_product_id>
+        <clementine:revolution_number>144</clementine:revolution_number>
+        <clementine:producer_institution_name>NAVAL RESEARCH LABORATORY</clementine:producer_institution_name>
+        <clementine:frame_sequence_number>5648</clementine:frame_sequence_number>
+        <clementine:sequence_table_id>DEQ_15</clementine:sequence_table_id>
+        <clementine:uncorrected_start_time>1994-03-22T03:32:10.545Z</clementine:uncorrected_start_time>
+        <clementine:clem_jpeg_version>CLEM-JPEG-0</clementine:clem_jpeg_version>
+        <clementine:twist_angle unit="deg">196.85</clementine:twist_angle>
+        <clementine:smear_magnitude>0.0</clementine:smear_magnitude>
+        <clementine:smear_azimuth unit="deg">25.68</clementine:smear_azimuth>
+        <clementine:north_azimuth unit="deg">185.11</clementine:north_azimuth>
+        <clementine:Celestial_Footprint_Vertices>
+          <clementine:Celestial_Reference_Pixel>
+            <clementine:reference_pixel_location>Upper Left Corner</clementine:reference_pixel_location>
+            <clementine:pixel_ra unit="deg">112.1</clementine:pixel_ra>
+            <clementine:pixel_dec unit="deg">-65.04</clementine:pixel_dec>
+          </clementine:Celestial_Reference_Pixel>
+          <clementine:Celestial_Reference_Pixel>
+            <clementine:reference_pixel_location>Upper Right Corner</clementine:reference_pixel_location>
+            <clementine:pixel_ra unit="deg">111.18</clementine:pixel_ra>
+            <clementine:pixel_dec unit="deg">-65.16</clementine:pixel_dec>
+          </clementine:Celestial_Reference_Pixel>
+          <clementine:Celestial_Reference_Pixel>
+            <clementine:reference_pixel_location>Lower Right Corner</clementine:reference_pixel_location>
+            <clementine:pixel_ra unit="deg">111.39</clementine:pixel_ra>
+            <clementine:pixel_dec unit="deg">-65.45</clementine:pixel_dec>
+          </clementine:Celestial_Reference_Pixel>
+          <clementine:Celestial_Reference_Pixel>
+            <clementine:reference_pixel_location>Lower Left Corner</clementine:reference_pixel_location>
+            <clementine:pixel_ra unit="deg">112.31</clementine:pixel_ra>
+            <clementine:pixel_dec unit="deg">-65.33</clementine:pixel_dec>
+          </clementine:Celestial_Reference_Pixel>
+          <clementine:Celestial_Reference_Pixel>
+            <clementine:reference_pixel_location>Center</clementine:reference_pixel_location>
+            <clementine:pixel_ra unit="deg">111.74</clementine:pixel_ra>
+            <clementine:pixel_dec unit="deg">-65.24</clementine:pixel_dec>
+          </clementine:Celestial_Reference_Pixel>
+        </clementine:Celestial_Footprint_Vertices>
+        <clementine:local_hour_angle unit="deg">181.18</clementine:local_hour_angle>
+        <clementine:Illumination_Secondary>
+          <clementine:light_source_name>EARTH</clementine:light_source_name>
+          <clementine:light_source_distance unit="km">384633.7
+                    </clementine:light_source_distance>
+          <clementine:sub_light_source_azimuth unit="deg">286.75
+                    </clementine:sub_light_source_azimuth>
+          <clementine:sub_light_source_latitude unit="deg">5.46
+                    </clementine:sub_light_source_latitude>
+          <clementine:sub_light_source_longitude unit="deg">352.1
+                    </clementine:sub_light_source_longitude>
+          <clementine:incidence_angle unit="deg">83.27</clementine:incidence_angle>
+          <clementine:phase_angle unit="deg">83.2</clementine:phase_angle>
+        </clementine:Illumination_Secondary>
+      </clementine:Clementine_Parameters>
+    </Mission_Area>
+    <Discipline_Area>
+      <msn:Mission_Information>
+        <msn:mission_phase_name>LUNAR MAPPING</msn:mission_phase_name>
+        <msn:product_type_name>EDR</msn:product_type_name>
+      </msn:Mission_Information>
+      <img:Imaging>
+        <Local_Internal_Reference>
+          <local_identifier_reference>fits_image</local_identifier_reference>
+          <local_reference_type>imaging_parameters_to_image_object</local_reference_type>
+        </Local_Internal_Reference>
+        <img:Detector>
+          <img:gain_mode_id>4</img:gain_mode_id>
+        </img:Detector>
+        <img:Exposure>
+          <img:exposure_duration unit="ms">1.067</img:exposure_duration>
+        </img:Exposure>
+        <img:Onboard_Compression>
+          <img:onboard_compression_type>JPEG</img:onboard_compression_type>
+          <img:onboard_compression_ratio>23.73</img:onboard_compression_ratio>
+        </img:Onboard_Compression>
+        <img:Optical_Filter>
+          <img:filter_name>D</img:filter_name>
+          <img:bandwidth unit="nm">50</img:bandwidth>
+          <img:center_filter_wavelength unit="nm">750</img:center_filter_wavelength>
+        </img:Optical_Filter>
+        <img:Instrument_State>
+          <img:Device_Component_States>
+            <img:Device_Component_State>
+              <img:device_name>Micro Channel Plate</img:device_name>
+              <img:device_state>Gain Mode 158</img:device_state>
+            </img:Device_Component_State>
+            <img:Device_Component_State>
+              <img:device_name>Detector</img:device_name>
+              <img:device_state>Offset Mode 5</img:device_state>
+            </img:Device_Component_State>
+          </img:Device_Component_States>
+          <img:Device_Temperatures>
+            <img:Device_Temperature>
+              <img:device_name>Focal Plane Array</img:device_name>
+              <img:temperature_value unit="K">274.698</img:temperature_value>
+            </img:Device_Temperature>
+          </img:Device_Temperatures>
+        </img:Instrument_State>
+      </img:Imaging>
+      <geom:Geometry>
+        <geom:Geometry_Orbiter>
+          <geom:geometry_reference_time_utc>1994-03-22T03:32:10.536Z</geom:geometry_reference_time_utc>
+          <geom:Orbiter_Identification>
+            <geom:Geometry_Target_Identification>
+              <geom:name>Moon</geom:name>
+              <Internal_Reference>
+                <lidvid_reference>urn:nasa:pds:context:target:satellite.earth.moon::1.1</lidvid_reference>
+                <reference_type>geometry_to_body</reference_type>
+              </Internal_Reference>
+            </geom:Geometry_Target_Identification>
+            <geom:Coordinate_System_Identification>
+              <geom:coordinate_system_type>Spherical</geom:coordinate_system_type>
+              <geom:Coordinate_System_Origin_Identification>
+                <geom:name>Earth</geom:name>
+                <Internal_Reference>
+                  <lidvid_reference>urn:nasa:pds:context:target:planet.earth::1.3</lidvid_reference>
+                  <reference_type>geometry_to_body</reference_type>
+                </Internal_Reference>
+              </geom:Coordinate_System_Origin_Identification>
+              <geom:Reference_Frame_Identification>
+                <geom:frame_spice_name>J2000</geom:frame_spice_name>
+              </geom:Reference_Frame_Identification>
+            </geom:Coordinate_System_Identification>
+          </geom:Orbiter_Identification>
+          <geom:Pixel_Dimensions>
+            <geom:pixel_field_of_view_method>Central Pixel</geom:pixel_field_of_view_method>
+            <geom:Pixel_Size_Projected>
+              <geom:reference_location>Boresight Intercept Point</geom:reference_location>
+              <geom:horizontal_pixel_footprint unit="km">0.03
+                        </geom:horizontal_pixel_footprint>
+              <geom:vertical_pixel_footprint unit="km">0.03</geom:vertical_pixel_footprint>
+            </geom:Pixel_Size_Projected>
+          </geom:Pixel_Dimensions>
+          <geom:Distances>
+            <geom:Distances_Specific>
+              <geom:spacecraft_heliocentric_distance unit="km">149185396.8
+                        </geom:spacecraft_heliocentric_distance>
+              <geom:spacecraft_target_center_distance unit="km">3403.6
+                        </geom:spacecraft_target_center_distance>
+              <geom:spacecraft_target_boresight_intercept_distance unit="km">1666.2
+                        </geom:spacecraft_target_boresight_intercept_distance>
+            </geom:Distances_Specific>
+          </geom:Distances>
+          <geom:Surface_Geometry>
+            <geom:Surface_Geometry_Specific>
+              <geom:Footprint_Vertices>
+                <geom:Pixel_Intercept>
+                  <geom:reference_pixel_location>Upper Left Corner</geom:reference_pixel_location>
+                  <geom:pixel_latitude unit="deg">82.51</geom:pixel_latitude>
+                  <geom:pixel_longitude unit="deg">71.46</geom:pixel_longitude>
+                </geom:Pixel_Intercept>
+                <geom:Pixel_Intercept>
+                  <geom:reference_pixel_location>Upper Right Corner</geom:reference_pixel_location>
+                  <geom:pixel_latitude unit="deg">82.13</geom:pixel_latitude>
+                  <geom:pixel_longitude unit="deg">71.12</geom:pixel_longitude>
+                </geom:Pixel_Intercept>
+                <geom:Pixel_Intercept>
+                  <geom:reference_pixel_location>Lower Right Corner</geom:reference_pixel_location>
+                  <geom:pixel_latitude unit="deg">82.16</geom:pixel_latitude>
+                  <geom:pixel_longitude unit="deg">69.02</geom:pixel_longitude>
+                </geom:Pixel_Intercept>
+                <geom:Pixel_Intercept>
+                  <geom:reference_pixel_location>Lower Left Corner</geom:reference_pixel_location>
+                  <geom:pixel_latitude unit="deg">82.54</geom:pixel_latitude>
+                  <geom:pixel_longitude unit="deg">69.25</geom:pixel_longitude>
+                </geom:Pixel_Intercept>
+                <geom:Pixel_Intercept>
+                  <geom:reference_pixel_location>Center</geom:reference_pixel_location>
+                  <geom:pixel_latitude unit="deg">82.34</geom:pixel_latitude>
+                  <geom:pixel_longitude unit="deg">70.21</geom:pixel_longitude>
+                </geom:Pixel_Intercept>
+              </geom:Footprint_Vertices>
+              <geom:subsolar_azimuth unit="deg">358.1</geom:subsolar_azimuth>
+              <geom:subsolar_latitude unit="deg">1.3</geom:subsolar_latitude>
+              <geom:subsolar_longitude unit="deg">62.8</geom:subsolar_longitude>
+              <geom:subspacecraft_azimuth unit="deg">296.48</geom:subspacecraft_azimuth>
+              <geom:subspacecraft_latitude unit="deg">82.33</geom:subspacecraft_latitude>
+              <geom:subspacecraft_longitude unit="deg">69.94</geom:subspacecraft_longitude>
+            </geom:Surface_Geometry_Specific>
+          </geom:Surface_Geometry>
+          <geom:Illumination_Geometry>
+            <geom:Illumination_Specific>
+              <geom:reference_location>Boresight Intercept Point</geom:reference_location>
+              <geom:emission_angle unit="deg">0.08</geom:emission_angle>
+              <geom:incidence_angle unit="deg">81.1</geom:incidence_angle>
+              <geom:phase_angle unit="deg">81.06</geom:phase_angle>
+            </geom:Illumination_Specific>
+          </geom:Illumination_Geometry>
+          <geom:Vectors>
+            <geom:Vectors_Cartesian_Specific>
+              <geom:Vector_Cartesian_Position_Spacecraft_To_Target>
+                <geom:x_position unit="km">-526.8</geom:x_position>
+                <geom:y_position unit="km">1322.0</geom:y_position>
+                <geom:z_position unit="km">-3091.8</geom:z_position>
+                <geom:light_time_correction_applied>Received_Light_Time_Stellar_Abb</geom:light_time_correction_applied>
+              </geom:Vector_Cartesian_Position_Spacecraft_To_Target>
+              <geom:Vector_Cartesian_Position_Sun_To_Spacecraft>
+                <geom:x_position unit="km">149151098.1</geom:x_position>
+                <geom:y_position unit="km">2924987.2</geom:y_position>
+                <geom:z_position unit="km">1294993.9</geom:z_position>
+                <geom:light_time_correction_applied>Received_Light_Time_Stellar_Abb</geom:light_time_correction_applied>
+              </geom:Vector_Cartesian_Position_Sun_To_Spacecraft>
+              <geom:Vector_Cartesian_Velocity_Spacecraft_Relative_To_Sun>
+                <geom:x_velocity unit="km/s">-1.7229</geom:x_velocity>
+                <geom:y_velocity unit="km/s">-28.0874</geom:y_velocity>
+                <geom:z_velocity unit="km/s">-11.5669</geom:z_velocity>
+                <geom:light_time_correction_applied>Received_Light_Time_Stellar_Abb</geom:light_time_correction_applied>
+              </geom:Vector_Cartesian_Velocity_Spacecraft_Relative_To_Sun>
+              <geom:Vector_Cartesian_Velocity_Spacecraft_Relative_To_Target>
+                <geom:x_velocity unit="km/s">1.0363</geom:x_velocity>
+                <geom:y_velocity unit="km/s">0.2941</geom:y_velocity>
+                <geom:z_velocity unit="km/s">-0.5334</geom:z_velocity>
+                <geom:light_time_correction_applied>Received_Light_Time_Stellar_Abb</geom:light_time_correction_applied>
+              </geom:Vector_Cartesian_Velocity_Spacecraft_Relative_To_Target>
+            </geom:Vectors_Cartesian_Specific>
+          </geom:Vectors>
+        </geom:Geometry_Orbiter>
+      </geom:Geometry>
+      <proc:Processing_Information>
+        <Local_Internal_Reference>
+          <local_identifier_reference>fits_image</local_identifier_reference>
+          <local_reference_type>processing_information_to_data_object</local_reference_type>
+        </Local_Internal_Reference>
+        <proc:Process>
+          <proc:description>Initial data archival.</proc:description>
+          <proc:Software>
+            <proc:name>NRL-ACT-MGRAB V1.2</proc:name>
+          </proc:Software>
+        </proc:Process>
+        <proc:Process>
+          <proc:description>Decompression from CLEM-JPEG format (if applicable).</proc:description>
+          <proc:Software>
+            <proc:name>Clementine Image Decompression and Formatting</proc:name>
+            <proc:software_id>CLEMDCMP</proc:software_id>
+            <proc:software_version_id>1.0</proc:software_version_id>
+            <proc:description>
+              Tracie Sucharski's Clementine EDR product swiss army knife, here instantiated in its PCDOS version
+              (CLEMDCMP.EXE) and executed using the DOSBOX PCDOS emulator. All archived versions of this software
+              are numbered 1.0, but this is specifically the binary executable archived on cl_0088, which differs
+              slightly from all others (although it does not produce obviously different output). Since cl_0088
+              served as the summary and errata disc for all EDR volumes, we consider its software and documentation
+              products the definitive versions.
+            </proc:description>
+          </proc:Software>
+        </proc:Process>
+        <proc:Process>
+          <proc:description>Conversion to PDS4 format.</proc:description>
+          <proc:Software>
+            <proc:name>Planetary Data Reader</proc:name>
+            <proc:description>
+              Million Concepts' planetary data and metadata reading and conversion suite.
+            </proc:description>
+          </proc:Software>
+        </proc:Process>
+      </proc:Processing_Information>
+    </Discipline_Area>
+  </Observation_Area>
+  <Reference_List>
+    <Internal_Reference>
+      <lidvid_reference>urn:nasa:pds:clementine:browse:19940322t033210_hires_moon::1.0</lidvid_reference>
+      <reference_type>data_to_browse</reference_type>
+      <comment>
+    TIFF browse image associated with this product.
+    </comment>
+    </Internal_Reference>
+    <Source_Product_External>
+      <external_source_product_identifier>
+        CLEM1-L/E/Y-A/B/U/H/L/N-2-EDR-V1.0:LHD5648R.144
+      </external_source_product_identifier>
+      <reference_type>data_to_raw_source_product</reference_type>
+      <curating_facility>IMG</curating_facility>
+      <description>
+        PDS3 version of this product.
+      </description>
+    </Source_Product_External>
+  </Reference_List>
+  <File_Area_Observational>
+    <File>
+      <file_name>19940322t033210_hires_moon.fits</file_name>
+      <creation_date_time>1994-10-30T17:54:40Z</creation_date_time>
+      <file_size unit="byte">115200</file_size>
+    </File>
+    <Header>
+      <name>FITS Image Header</name>
+      <offset unit="byte">0</offset>
+      <object_length unit="byte">2880</object_length>
+      <parsing_standard_id>FITS 3.0</parsing_standard_id>
+    </Header>
+    <Array_2D_Image>
+      <local_identifier>fits_image</local_identifier>
+      <offset unit="byte">2880</offset>
+      <axes>2</axes>
+      <axis_index_order>Last Index Fastest</axis_index_order>
+      <description>
+        Clementine-1 HIRES EDR Image
+      </description>
+      <Element_Array>
+        <data_type>UnsignedByte</data_type>
+      </Element_Array>
+      <Axis_Array>
+        <axis_name>Line</axis_name>
+        <elements>288</elements>
+        <sequence_number>1</sequence_number>
+      </Axis_Array>
+      <Axis_Array>
+        <axis_name>Sample</axis_name>
+        <elements>384</elements>
+        <sequence_number>2</sequence_number>
+      </Axis_Array>
+      <Object_Statistics>
+        <maximum>91</maximum>
+        <minimum>1</minimum>
+        <mean>17.731</mean>
+        <standard_deviation>7.829</standard_deviation>
+        <description>
+          These statistics are copied directly from the attached label of this
+          product's PDS3 source version. Although they seem generally accurate,
+          we have made no attempt to rigorously verify them for all products.
+
+          There are also two specific caveats given in the EDR errata for these statistics,
+          which we quote here at length:
+
+          (1)
+          "A problem was discovered with the MINIMUM keyword value found in the
+          labels of the image files. The MINIMUM value contains the minimum density
+          number (DN) value of the image array. The value is not always correct.
+          If the minimum value of the image array is located in the upper-left corner
+          pixel of the array (row 1, column 1) then the minimum value is not properly
+          reported. The MINIMUM value reported will be the next larger minimum value
+          in the image array. The problem exists for all volumes in the archive."
+
+          (2)
+          "Inconsistencies may exist between the histogram statistics found in the
+          image histogram object and the actual image that is decompressed on your
+          computer platform. Subtle differences in the floating point hardware among
+          computer platforms may cause the Density Number (DN) values of a resulting
+          decompressed image to be occasionally different (within 1 DN) than the
+          decompressed image used to generate the image histogram object. This
+          problem exists for all volumes in the archive."
+        </description>
+      </Object_Statistics>
+    </Array_2D_Image>
+  </File_Area_Observational>
+  <File_Area_Observational>
+    <File>
+      <file_name>19940322t033210_hires_moon_histogram.csv</file_name>
+      <file_size unit="byte">898</file_size>
+      <records>256</records>
+    </File>
+    <Table_Delimited>
+      <offset unit="byte">0</offset>
+      <parsing_standard_id>PDS DSV 1</parsing_standard_id>
+      <description>
+        Histogram of the uncompressed image, originally attached to the PDS3 EDR
+        product as a binary array. We have detached it and decoded it into an
+        ASCII table. No detailed description is given for these objects in
+        mission documentation, but they are presumably simply image histograms
+        in the usual sense, i.e., tables giving pixel frequencies at each of the
+        256 possible pixel values.
+      </description>
+      <records>256</records>
+      <record_delimiter>Carriage-Return Line-Feed</record_delimiter>
+      <field_delimiter>Comma</field_delimiter>
+      <Record_Delimited>
+        <fields>1</fields>
+        <groups>0</groups>
+        <Field_Delimited>
+          <name>Frequency</name>
+          <field_number>1</field_number>
+          <data_type>ASCII_NonNegative_Integer</data_type>
+          <description>
+            Number of pixels in the image with value equal to the index of this
+            row.
+          </description>
+        </Field_Delimited>
+      </Record_Delimited>
+    </Table_Delimited>
+  </File_Area_Observational>
+</Product_Observational>
