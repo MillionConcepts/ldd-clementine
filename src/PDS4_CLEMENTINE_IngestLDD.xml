@@ -3,9 +3,9 @@
    schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Ingest_LDD
-		xmlns="http://pds.nasa.gov/pds4/pds/v1"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation=" http://pds.nasa.gov/pds4/pds/v1  http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
+        xmlns="http://pds.nasa.gov/pds4/pds/v1"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation=" http://pds.nasa.gov/pds4/pds/v1  http://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1F00.xsd">
 
     <name>Clementine Mission Dictionary</name>
     <ldd_version_id>1.0.0.0</ldd_version_id>
@@ -21,7 +21,7 @@
         v1.0.0.0 M. St. Clair
         - Initial version of the Clementine mission dictionary for PDS3 to PDS4 migration
     </comment>
-	<last_modification_date_time>2020-11-28T10:00:00Z</last_modification_date_time>
+    <last_modification_date_time>2020-11-28T10:00:00Z</last_modification_date_time>
 
     <!--Attributes -->    
 
@@ -218,10 +218,14 @@
         <nillable_flag>false</nillable_flag>
         <submitter_name>Michael St. Clair</submitter_name>
         <definition>
-            north_azimuth gives the azimuth, in degrees, of the 'smear' velocity vector (velocity of image boresight intercept with target). Unlike smear_azimuth, the reference for this angle
-            is the vector between the image center and the target north pole.
+            north_azimuth gives the azimuth, in degrees, of the vector between the image center and the target north pole. The reference line for this angle extends from image center to image right edge; angle increases clockwise in the image plane.
         </definition>
-        <comment>Direct analog of the PDS3 Data Dictionary element "NORTH_AZIMUTH."</comment>
+        <comment>
+            Direct analog of the PDS3 Data Dictionary element "NORTH_AZIMUTH." Included in this mission dictionary over geom:
+            north_azimuth because geom:Object_Orientation_North_East
+            also requires an east_azimuth value, which is not explicitly
+            given in the Clementine EDR labels.
+        </comment>
         <DD_Value_Domain>
             <enumeration_flag>false</enumeration_flag>
             <value_data_type>ASCII_Real</value_data_type>

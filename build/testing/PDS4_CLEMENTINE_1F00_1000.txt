@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Sat Nov 28 05:21:05 EST 2020
+   Time                   Mon Dec 07 14:37:38 EST 2020
    Common Schema          [PDS4_PDS_1F00.xsd]
    Common Schematron      [PDS4_PDS_1F00.sch]
    IM Version Id:         1.15.0.0
@@ -116,7 +116,7 @@ Parsed Input - Attributes:
    name                   north_azimuth
    version                1.15
    value data type        ASCII_Real
-   description             north_azimuth gives the azimuth, in degrees, of the 'smear' velocity vector (velocity of image boresight intercept with target). Unlike smear_azimuth, the reference for this angle is the vector between the image center and the target north pole. 
+   description             north_azimuth gives the azimuth, in degrees, of the vector between the image center and the target north pole. The reference line for this angle extends from image center to image right edge; angle increases clockwise in the image plane. 
    minimum value          0
    maximum value          360
    unit of measure type   Units_of_Angle
