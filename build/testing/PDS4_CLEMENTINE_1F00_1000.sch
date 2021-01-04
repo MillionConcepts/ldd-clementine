@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:clementine  Version:1.0.0.0 - Mon Dec 07 14:37:38 EST 2020 -->
+  <!-- PDS4 Schematron for Name Space Id:clementine  Version:1.0.0.0 - Mon Jan 04 18:03:11 EST 2021 -->
   <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -36,8 +36,14 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="clementine:Clementine_Parameters/clementine:clem_jpeg_version">
-      <sch:assert test=". = ('CLEM-JPEG-0', 'CLEM-JPEG-1', 'None')">
-        The attribute clementine:clem_jpeg_version must be equal to one of the following values 'CLEM-JPEG-0', 'CLEM-JPEG-1', 'None'.</sch:assert>
+      <sch:assert test=". = ('CLEM-JPEG-0', 'CLEM-JPEG-1', 'CLEM-JPEG-2', 'None')">
+        The attribute clementine:clem_jpeg_version must be equal to one of the following values 'CLEM-JPEG-0', 'CLEM-JPEG-1', 'CLEM-JPEG-2', 'None'.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
+    <sch:rule context="clementine:Clementine_Parameters/clementine:cryocooler_duration">
+      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr')">
+        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 's', 'yr'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

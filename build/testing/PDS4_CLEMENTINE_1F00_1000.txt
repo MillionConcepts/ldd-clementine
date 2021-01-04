@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Dec 07 14:37:38 EST 2020
+   Time                   Mon Jan 04 18:03:11 EST 2021
    Common Schema          [PDS4_PDS_1F00.xsd]
    Common Schematron      [PDS4_PDS_1F00.sch]
    IM Version Id:         1.15.0.0
@@ -30,8 +30,8 @@ Parameters:
 
 Summary:
    Classes                4
-   Attributes             22
-   Associations           25
+   Attributes             23
+   Associations           26
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -56,6 +56,12 @@ Parsed Input - Header:
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
+
+   name                   cryocooler_duration
+   version                1.15
+   value data type        ASCII_Real
+   description             The cryocooler_duration attribute provides the duration, in seconds, since the activation of an imager's cooling device and the acquisition of an image. 
+   unit of measure type   Units_of_Time
 
    name                   original_product_id
    version                1.15
@@ -90,7 +96,7 @@ Parsed Input - Attributes:
    name                   clem_jpeg_version
    version                1.15
    value data type        ASCII_Short_String_Collapsed
-   description            The clem_jpeg_version attribute specifies the specific set of parameters fed to the Matra compression chip that performed the onboard JPEG-variant discrete cosine transformation image compression. Two settings were used in the primary mission: "CLEM-JPEG-0" and, most often, "CLEM-JPEG-1." 
+   description            The clem_jpeg_version attribute specifies the specific set of parameters fed to the Matra compression chip that performed the onboard JPEG-variant discrete cosine transformation image compression. Two settings were used in the primary mission: "CLEM-JPEG-0" and, most often, "CLEM-JPEG-1." "CLEM-JPEG-2" also appears in some files but is not described in documentation. 
 
    name                   twist_angle
    version                1.15
@@ -267,6 +273,11 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      clementine.local_hour_angle
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      clementine.cryocooler_duration
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
