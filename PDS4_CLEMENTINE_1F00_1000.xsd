@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:clementine  Version:1.0.0.0 - Thu Jan 28 02:28:24 EST 2021 -->
+  <!-- PDS4 XML/Schema for Name Space Id:clementine  Version:1.0.0.0 - Thu Jan 28 02:26:36 EST 2021 -->
   <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.15.0.0 - pds: - Common Dictionary                                       -->
   <!-- 1.0.0.0 - clementine: - Clementine Mission Dictionary                     -->
-  <!--   file:PDS4_CLEMENTINE_IngestLDD.xml                                      -->
+  <!--   file:/home/michael/scratch/ldd-clementine/src/PDS4_CLEMENTINE_IngestLDD -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/mission/clementine/v1"
