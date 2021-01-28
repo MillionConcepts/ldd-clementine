@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:clementine  Version:1.0.0.0 - Mon Jan 04 18:55:33 EST 2021 -->
+  <!-- PDS4 Schematron for Name Space Id:clementine  Version:1.0.0.0 - Thu Jan 28 02:23:44 EST 2021 -->
   <!-- Generated from the PDS4 Information Model Version 1.15.0.0 - System Build 11a -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -36,8 +36,8 @@
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="clementine:Clementine_Parameters/clementine:clem_jpeg_version">
-      <sch:assert test=". = ('CLEM-JPEG-0', 'CLEM-JPEG-1', 'CLEM-JPEG-2', 'None')">
-        The attribute clementine:clem_jpeg_version must be equal to one of the following values 'CLEM-JPEG-0', 'CLEM-JPEG-1', 'CLEM-JPEG-2', 'None'.</sch:assert>
+      <sch:assert test=". = ('CLEM-JPEG-0', 'CLEM-JPEG-1', 'CLEM-JPEG-2', 'CLEM-JPEG-3', 'None')">
+        The attribute clementine:clem_jpeg_version must be equal to one of the following values 'CLEM-JPEG-0', 'CLEM-JPEG-1', 'CLEM-JPEG-2', 'CLEM-JPEG-3', 'None'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

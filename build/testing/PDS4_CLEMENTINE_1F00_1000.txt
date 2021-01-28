@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  false
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Jan 04 18:55:33 EST 2021
+   Time                   Thu Jan 28 02:23:44 EST 2021
    Common Schema          [PDS4_PDS_1F00.xsd]
    Common Schematron      [PDS4_PDS_1F00.sch]
    IM Version Id:         1.15.0.0
@@ -96,7 +96,7 @@ Parsed Input - Attributes:
    name                   clem_jpeg_version
    version                1.15
    value data type        ASCII_Short_String_Collapsed
-   description            The clem_jpeg_version attribute specifies the specific set of parameters fed to the Matra compression chip that performed the onboard JPEG-variant discrete cosine transformation image compression. Two settings were used in the primary mission: "CLEM-JPEG-0" and, most often, "CLEM-JPEG-1." "CLEM-JPEG-2" also appears in some files but is not described in documentation. 
+   description             The clem_jpeg_version attribute specifies the specific set of parameters fed to the Matra compression chip that performed the onboard JPEG-variant discrete cosine transformation image compression. Two settings are documented as commonly used in the primary mission: "CLEM-JPEG-0" and, most often, "CLEM-JPEG-1." "CLEM-JPEG-2" and "CLEM-JPEG-3" also appear in some files but are not described in documentation. 
 
    name                   twist_angle
    version                1.15

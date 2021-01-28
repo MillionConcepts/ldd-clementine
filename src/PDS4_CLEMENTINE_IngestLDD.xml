@@ -146,7 +146,12 @@
         <local_identifier>clementine.clem_jpeg_version</local_identifier>
         <nillable_flag>false</nillable_flag>
         <submitter_name>Michael St. Clair</submitter_name>
-        <definition>The clem_jpeg_version attribute specifies the specific set of parameters fed to the Matra compression chip that performed the onboard JPEG-variant discrete cosine transformation image compression. Two settings were used in the primary mission: "CLEM-JPEG-0" and, most often, "CLEM-JPEG-1." "CLEM-JPEG-2" also appears in some files but is not described in documentation.
+        <definition>
+            The clem_jpeg_version attribute specifies the specific set of parameters fed to the Matra
+            compression chip that performed the onboard JPEG-variant discrete cosine transformation image
+            compression. Two settings are documented as commonly used in the primary mission: "CLEM-JPEG-0"
+            and, most often, "CLEM-JPEG-1." "CLEM-JPEG-2" and "CLEM-JPEG-3" also appear in some files but
+            are not described in documentation.
         </definition>
         <DD_Value_Domain>
             <enumeration_flag>true</enumeration_flag>
@@ -167,6 +172,12 @@
                 <value>CLEM-JPEG-2</value>
                 <value_meaning>
                 CLEM-JPEG-2 denotes some other group of settings not detailed in documentation.
+                </value_meaning>
+            </DD_Permissible_Value>
+            <DD_Permissible_Value>
+                <value>CLEM-JPEG-3</value>
+                <value_meaning>
+                CLEM-JPEG-3c denotes some other group of settings not detailed in documentation.
                 </value_meaning>
             </DD_Permissible_Value>
           <DD_Permissible_Value>
